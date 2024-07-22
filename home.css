@@ -57,8 +57,7 @@ nav {
 }
 
 .school {
-	/* display: grid; */
-	/* place-content: center; */
+
 
 	width: 100%;
 
@@ -89,4 +88,6 @@ nav {
 	p {
 		font-size:  1.25rem
 	}
+	display: grid; 
+	place-content: center;
 }
