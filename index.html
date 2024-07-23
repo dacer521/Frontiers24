@@ -3,22 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <script src = "homePage/script.js"></script>
+    <link rel = "stylesheet" href = "homePage/home.css">
 
-    <link rel = "stylesheet" href = "home.css">
-
-
+    
   </head>
 
   <body>
     <header>
-      <img onmouseover="bigImg()" src="images/logo.png" class = "logo" alt="Logo">
+      <img src="images/logo.png" class = "logo" alt="Logo">
 
+      <br>
+      <br>
+      <br>
+      <br>
     <nav class = "navbar">
 
       <ul>
         <li><button><a href = "index.html">Home</a></button></li>
-        <li><button><a href="../aboutMe/index.html">About Me</a></button></li>
-        <li><button><a href="../myTown/index.html">My Town</a></button></li>
+        <li><button><a target = "_blank" href="myTown/index.html">My Town</a></button></li>
       </ul>
 
     </nav>
@@ -27,7 +30,8 @@
 
 
   <div class = "center">
-    <h1 id = "name">Who is David Manuel <i>really</i></h1>
+    <h1>Who is David Manuel <i>really</i></h1>
+    <h4 id = "abMe">About Me</h4>
     <img src = "images/image.PNG">
   </div>
 
@@ -37,16 +41,20 @@
 
 </div>
 
+
 <div class = "hobbies">
+<br>
+<br>
+<br>
 
-<p> Some of my hobbies include playing cello, playing magic the gathering, and reading</p>
+<p> Some of my hobbies include playing <button onclick = "showHide('cello')" "><b>cello</b></button>, playing <button onclick = "showHide('mtg')" ><b>magic the gathering</b></button>, and <button onclick = "showHide('book')"><b>reading</b></button></p>
 
-<img src = "images/cello.jpg" class = "cello" alt = "cello">
-<img src = "images/magic.png" class = "mtg" alt = "magic the gathering card">
-<img src = "images/book.jpg" alt = "book" class = "book">
+<img src = "images/cello.jpg" id = "cello" alt = "cello">
+<img src = "images/magic.png" id = "mtg" alt = "magic the gathering card">
+<img src = "images/book.jpg" alt = "book" id = "book">
 
 </div>
 
-
+<footer>Alleged copyright David Manuel 2024 via WPI. No rights reserved</footer>
   </body>
 </html>
