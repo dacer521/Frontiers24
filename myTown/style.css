@@ -122,12 +122,29 @@ nav {
 	border-radius: 1rem;
 }
 
-@media screen and (min-width: 780px) {
+.lexington, .park {
+	/* max-width: 40rem; */
+	width: 40rem;
+	/* max-height: 25rem; */
+	height: 25rem;
+	border-radius: 1rem;
+	
+}
+
+footer {
+	float: bottom;
+	position: fixed;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (max-width: 1050px) {
 	.lexington, .park {
-		max-width: 40rem;
-		width: 40rem;
-		max-height: 25rem;
-		height: 25rem;
+		max-width: 30rem;
+		width: 30rem;
+		max-height: 18rem;
+		height: 18rem;
 		border-radius: 1rem;
 		
 	}

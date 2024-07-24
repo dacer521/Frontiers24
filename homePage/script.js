@@ -1,15 +1,18 @@
-<<<<<<< HEAD
 window.onload = function() {
-  var cello = document.getElementById('cello');
-  var mtg = document.getElementById('mtg');
-  var book = document.getElementById('book');
+  const nav = document.getElementById("navbar")
+  nav.style.visibility = "hidden";
+
+  const cello = document.getElementById('cello');
+  const mtg = document.getElementById('mtg');
+  const book = document.getElementById('book');
+
 
   cello.style.display = "none";
   mtg.style.display = "none";
   book.style.display = "none";
 };
   function showHide(elementId) {
-    var element = document.getElementById(elementId);
+    let element = document.getElementById(elementId);
     if (element.style.display === "none") {
 
       element.style.display = "inline";
@@ -43,49 +46,26 @@ window.onload = function() {
       element.style.display = "none";
     }
   }
-=======
-window.onload = function() {
-  var cello = document.getElementById('cello');
-  var mtg = document.getElementById('mtg');
-  var book = document.getElementById('book');
 
-  cello.style.display = "none";
-  mtg.style.display = "none";
-  book.style.display = "none";
-};
-  function showHide(elementId) {
-    var element = document.getElementById(elementId);
-    if (element.style.display === "none") {
+  // keep track of previous scroll position
+let prevScrollPos = document.documentElement.scrollTop;
 
-      element.style.display = "inline";
+window.addEventListener('scroll', function() {
+  // current scroll position
+  const currentScrollPos = document.documentElement.scrollTop;
+  const nav = document.getElementById("navbar")
 
-      if (elementId === 'cello') {
-        element.style.width = "30%";
-        element.style.height = "40%";
+  if (prevScrollPos > currentScrollPos) {
+    // user has scrolled up
+    // nav.style.transition.transform(0.2);
 
+    nav.style.visibility = "visible";
 
-        mtg.style.display = "none";
-        book.style.display = "none";
-
-
-      } else if (elementId === 'mtg') {
-        element.style.width = "33.3%";
-        element.style.height = "80%";
-
-        cello.style.display = "none";
-        book.style.display = "none";
-
-
-      } else if (elementId === 'book') {
-        element.style.width = "30%";
-        element.style.height = "70%";
-
-        cello.style.display = "none";
-        mtg.style.display = "none";
-
-      }
-    } else {
-      element.style.display = "none";
-    }
+  } else {
+    // user has scrolled down
+    nav.style.visibility = "hidden";
   }
->>>>>>> fcca7c6e2bb87ee19561405ce8f64669b619caeb
+
+  // update previous scroll position
+  prevScrollPos = currentScrollPos;
+});
